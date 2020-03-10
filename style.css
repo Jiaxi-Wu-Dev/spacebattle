@@ -2,3 +2,7 @@ body {
     background-image: url(./spaceship.jpeg);
     background-size: cover;
 }
+
+#startGameText {
+    color: white;
+}

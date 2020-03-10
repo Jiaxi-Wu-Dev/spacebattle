@@ -95,7 +95,7 @@ $(document).ready(function(){
     var beginGame = prompt("ARE YOU READY TO DEFEND EARTH", "YES/NO");
 
 if (beginGame === "YES") {
-    document.getElementById("startGameText").innerHTML = "Lets begin the game! Right click, then click on inspect and click console";
+    document.getElementById("startGameText").innerHTML = "";
     console.log(" Earth has been attacked by a horde of aliens! You are the captain of the USS Schwarzenegger, on a mission to destroy every last alien ship. Battle the aliens as you try to destroy them with your lasers. There are six alien ships. Before each battle, you have the option to continue onwards to the next ship or to retreat. Beware, if you choose retreat Earth will be left defenseless and it will be game over!" )
 
 } else {
@@ -108,7 +108,6 @@ var getIntoShip = prompt("Time to get into the ship, ready to engage?", "YES/NO"
 if (getIntoShip === "YES"){
     console.log("You are encountering your first spaceship! " + alienship1.name + " engaged!");
     alienship1.amount = 1
-    console.log(alienship1.amount)
     if (alienship1.amount === 1 && alienship1.hull >= 0 && ussschwarzenegger.hull >= 0){
         console.log("preparing to fire lasers")
         if (ussschwarzenegger.accuracy >= alienship1.accuracy){
@@ -116,7 +115,7 @@ if (getIntoShip === "YES"){
             let damageToAlienHull = alienship1.hull - 5;
             console.log(damageToAlienHull)
             if (alienship1.hull >= 0) {
-                console.log(alienship1.name + " destroyed");
+                console.log(alienship1.name + " %c destroyed", "color: red; font-size: large");
                 alienship1.amount = 0
                 let fightSecondShip = prompt("Ready to fight the Second Alien Ship?", "YES/NO")
                 if (fightSecondShip === "YES") {
@@ -129,7 +128,7 @@ if (getIntoShip === "YES"){
                             let damageToAlienHull2 = alienship2.hull - 5;
                             console.log(damageToAlienHull2)
                             if (alienship2.hull >= 0) {
-                                console.log(alienship2.name + " destroyed");
+                                console.log(alienship2.name + "%c destroyed", "color: red; font-size: large");
                                 alienship2.amount = 0
                                 let fightThirdShip = prompt("Ready to fight the Third Alien Ship?", "YES/NO")
                                 if (fightThirdShip === "YES"){
@@ -142,7 +141,7 @@ if (getIntoShip === "YES"){
                                             let damageToAlienHull3 = alienship3.hull - 5;
                                             console.log(damageToAlienHull3)
                                             if (alienship3.hull >= 0) {
-                                                console.log(alienship3.name + " destroyed");
+                                                console.log(alienship3.name + "%c destroyed", "color: red; font-size: large");
                                                 alienship3.amount = 0
                                                 let fightFourthShip = prompt("Ready to fight the Fourth Alien Ship?", "YES/NO")
                                                 if (fightFourthShip = "YES") { 
@@ -155,7 +154,7 @@ if (getIntoShip === "YES"){
                                                             let damageToAlienHull4 = alienship4.hull - 5;
                                                             console.log(damageToAlienHull4)
                                                             if (alienship4.hull >= 0) {
-                                                                console.log(alienship4.name + " destroyed")
+                                                                console.log(alienship4.name + " %c destroyed", "color: red; font-size: large")
                                                                 alienship4.amount = 0
                                                                 let fightFifthShip = prompt("Ready to fight the Fifth Alien Ship?", "YES/NO")
                                                                 if (fightFifthShip === "YES"){
@@ -168,7 +167,7 @@ if (getIntoShip === "YES"){
                                                                             let damageToAlienHull5 = alienship5.hull - 5;
                                                                             console.log(damageToAlienHull5)
                                                                             if (alienship5.hull >= 0) {
-                                                                                console.log(alienship5.name + " destroyed")
+                                                                                console.log(alienship5.name + "%c destroyed", "color: red; font-size: large")
                                                                                 alienship5.amount = 0
                                                                                 let fightSixthShip = prompt("Ready to fight the Sixth Alien Ship?", "YES/NO") 
                                                                                 if (fightSixthShip = "YES"){
@@ -181,7 +180,7 @@ if (getIntoShip === "YES"){
                                                                                     let damageToAlienHull6 = alienship6.hull - 5;
                                                                                     console.log(damageToAlienHull6)
                                                                                     if (alienship6.hull >= 0) {
-                                                                                    console.log(alienship6.name + " destroyed, You have successfully defended Earth!")
+                                                                                    console.log(alienship6.name + " destroyed, %c You have successfully defended Earth!", "color: green; font-size: large")
                                                                                 }
                                                                             }
                                                                         }
