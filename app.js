@@ -91,7 +91,8 @@ let alienship6 = {
     amount: 00
 }
 
-var beginGame = prompt("ARE YOU READY TO DEFEND EARTH", "YES/NO");
+$(document).ready(function(){
+    var beginGame = prompt("ARE YOU READY TO DEFEND EARTH", "YES/NO");
 
 if (beginGame === "YES") {
     document.getElementById("startGameText").innerHTML = "Lets begin the game! Right click, then click on inspect and click console";
@@ -227,3 +228,6 @@ if (getIntoShip === "YES"){
         }
     }
 }
+
+  });
+
